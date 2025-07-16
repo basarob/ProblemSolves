@@ -10,18 +10,19 @@ using namespace std;
 
 int main()
 {
-    int i, sum = 0, total = 0, num1 = 1, num2 = 1;
+    int sum = 0, temp = 0, num1 = 1, num2 = 2;
 
-    for (i = 0; i < 31; i++)
+    while (num1 <= 4000000)
     {
-        total = num1 + num2;
+        if (num1 % 2 == 0)
+            sum += num1;
+
+        temp = num1 + num2;
         num1 = num2;
-        num2 = total;
-        if (total % 2 == 0)
-        {
-            sum += total;
-        }
+        num2 = temp;
     }
+
     cout << sum << endl;
+
     return 0;
 }
